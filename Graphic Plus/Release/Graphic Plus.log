@@ -1,11 +1,11 @@
-﻿生成启动时间为 2019/9/14 11:58:12。
+﻿生成启动时间为 2019/9/14 12:48:46。
      1>项目“F:\program\C++\Graphic Plus\Graphic Plus\Graphic Plus.vcxproj”在节点 2 上(Rebuild 个目标)。
      1>AddCudaCompileDeps:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /DNDEBUG /DGRAPHICPLUS_EXPORTS /D_WINDOWS /D_USRDLL /DGMAPI_USE_D3D /D_CRT_SECURE_NO_WARNINGS /D_USING_V110_SDK71_ /D_WINDLL /D_UNICODE /DUNICODE /ID:\NVIDIA\CUDA\Toolkit\include /ID:\NVIDIA\CUDA\Toolkit\bin /ID:\NVIDIA\CUDA\Toolkit\include /I. /FIcuda_runtime.h /c "F:\program\C++\Graphic Plus\Graphic Plus\kernel.cu" 
      1>项目“F:\program\C++\Graphic Plus\Graphic Plus\Graphic Plus.vcxproj”(1)正在节点 2 上生成“F:\program\C++\Graphic Plus\Graphic Plus\Graphic Plus.vcxproj”(1:3) (CudaBuildCore 个目标)。
      1>CudaBuildCore:
          Compiling CUDA source file kernel.cu...
-         cmd.exe /C "F:\Nihil\AppData\tmpba7334b5515a469ba06e5da5183a7d21.cmd"
+         cmd.exe /C "F:\Nihil\AppData\tmpde4012d811e041dda928f889f6875037.cmd"
          "D:\NVIDIA\CUDA\Toolkit\bin\nvcc.exe" -gencode=arch=compute_35,code=\"sm_35,compute_35\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin" -x cu  -ID:\NVIDIA\CUDA\Toolkit\include -ID:\NVIDIA\CUDA\Toolkit\include     --keep-dir Release -maxrregcount=0  --machine 32 --compile -cudart static     -DWIN32 -DNDEBUG -DGRAPHICPLUS_EXPORTS -D_WINDOWS -D_USRDLL -DGMAPI_USE_D3D -D_CRT_SECURE_NO_WARNINGS -D_USING_V110_SDK71_ -D_WINDLL -D_UNICODE -DUNICODE -Xcompiler "/EHsc /W3 /nologo /O2 /FdRelease\vc120.pdb /FS /Zi  /MDd " -o Release\kernel.cu.obj "F:\program\C++\Graphic Plus\Graphic Plus\kernel.cu"
          
          F:\program\C++\Graphic Plus\Graphic Plus>"D:\NVIDIA\CUDA\Toolkit\bin\nvcc.exe" -gencode=arch=compute_35,code=\"sm_35,compute_35\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin" -x cu  -ID:\NVIDIA\CUDA\Toolkit\include -ID:\NVIDIA\CUDA\Toolkit\include     --keep-dir Release -maxrregcount=0  --machine 32 --compile -cudart static     -DWIN32 -DNDEBUG -DGRAPHICPLUS_EXPORTS -D_WINDOWS -D_USRDLL -DGMAPI_USE_D3D -D_CRT_SECURE_NO_WARNINGS -D_USING_V110_SDK71_ -D_WINDLL -D_UNICODE -DUNICODE -Xcompiler "/EHsc /W3 /nologo /O2 /FdRelease\vc120.pdb /FS /Zi  /MDd " -o Release\kernel.cu.obj "F:\program\C++\Graphic Plus\Graphic Plus\kernel.cu" 
@@ -44,7 +44,7 @@
      1>CUDACOMPILE : nvcc warning : nvcc support for Microsoft Visual Studio 2013 and earlier has been deprecated and is no longer being maintained
          kernel.cu
          support for this version of Microsoft Visual Studio has been deprecated! Only the versions between 2015 and 2019 (inclusive) are supported!
-     1>F:/program/C++/Graphic Plus/Graphic Plus/kernel.cu(24): warning C4996: 'cudaThreadSynchronize': 被声明为已否决
+     1>F:/program/C++/Graphic Plus/Graphic Plus/kernel.cu(25): warning C4996: 'cudaThreadSynchronize': 被声明为已否决
                  d:\nvidia\cuda\toolkit\include\cuda_runtime_api.h(957) : 参见“cudaThreadSynchronize”的声明
      1>d:\nvidia\cuda\toolkit\include\crt\math_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
      1>d:\nvidia\cuda\toolkit\include\crt\math_functions.h(825): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
@@ -103,12 +103,9 @@
          Release\GmapiSounds.obj
          "Release\Graphic Plus.obj"
          Release\stdafx.obj
-            正在创建库 F:\program\C++\Graphic Plus\Release\GRAPHICPLUS.lib 和对象 F:\program\C++\Graphic Plus\Release\GRAPHICPLUS.exp
-         正在生成代码
-         已完成代码的生成
-         Graphic Plus.vcxproj -> F:\program\C++\Graphic Plus\Release\GRAPHICPLUS.dll
-     1>已完成生成项目“F:\program\C++\Graphic Plus\Graphic Plus\Graphic Plus.vcxproj”(Rebuild 个目标)的操作。
+     1>LINK : fatal error LNK1104: 无法打开文件“cuda_static.lib”
+     1>已完成生成项目“F:\program\C++\Graphic Plus\Graphic Plus\Graphic Plus.vcxproj”(Rebuild 个目标)的操作 - 失败。
 
-生成成功。
+生成失败。
 
-已用时间 00:00:11.37
+已用时间 00:00:22.42

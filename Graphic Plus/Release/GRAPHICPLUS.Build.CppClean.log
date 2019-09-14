@@ -17,6 +17,10 @@ f:\program\c++\graphic plus\graphic plus\release\gmapiconsts.obj
 f:\program\c++\graphic plus\graphic plus\release\gmapi3dgraphics.obj
 f:\program\c++\graphic plus\graphic plus\release\dllmain.obj
 release\kernel.cu.obj
+f:\program\c++\graphic plus\release\graphicplus.lib
+f:\program\c++\graphic plus\release\graphicplus.exp
+f:\program\c++\graphic plus\release\graphicplus.dll
+f:\program\c++\graphic plus\release\graphicplus.pdb
 f:\program\c++\graphic plus\graphic plus\release\kernel.cu.cache
 f:\program\c++\graphic plus\graphic plus\release\kernel.cu.obj
 f:\program\c++\graphic plus\graphic plus\release\graphic plus.tlog\cl.command.1.tlog
@@ -24,7 +28,7 @@ f:\program\c++\graphic plus\graphic plus\release\graphic plus.tlog\cl.read.1.tlo
 f:\program\c++\graphic plus\graphic plus\release\graphic plus.tlog\cl.write.1.tlog
 f:\program\c++\graphic plus\graphic plus\release\graphic plus.tlog\cudacompile.read.1u.tlog
 f:\program\c++\graphic plus\graphic plus\release\graphic plus.tlog\cudacompile.write.1u.tlog
+f:\program\c++\graphic plus\graphic plus\release\graphic plus.tlog\graphic plus.write.1u.tlog
 f:\program\c++\graphic plus\graphic plus\release\graphic plus.tlog\link.command.1.tlog
 f:\program\c++\graphic plus\graphic plus\release\graphic plus.tlog\link.read.1.tlog
-f:\program\c++\graphic plus\graphic plus\release\graphic plus.tlog\link.read.3.tlog
 f:\program\c++\graphic plus\graphic plus\release\graphic plus.tlog\link.write.1.tlog
