@@ -1,0 +1,61 @@
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\cmath
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\ConcurrencySal.h
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\crtdefs.h
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\cstdlib
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\limits.h
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\math.h
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\sal.h
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stddef.h
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\time.h
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\time.inl
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\use_ansi.h
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\vadefs.h
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\wtime.inl
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\xkeycheck.h
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\xtgmath.h
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\xtr1common
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\yvals.h
+d:\nvidia\cuda\toolkit\include\builtin_types.h
+d:\nvidia\cuda\toolkit\include\channel_descriptor.h
+d:\nvidia\cuda\toolkit\include\crt\common_functions.h
+d:\nvidia\cuda\toolkit\include\crt\device_double_functions.h
+d:\nvidia\cuda\toolkit\include\crt\device_double_functions.hpp
+d:\nvidia\cuda\toolkit\include\crt\device_functions.h
+d:\nvidia\cuda\toolkit\include\crt\device_functions.hpp
+d:\nvidia\cuda\toolkit\include\crt\host_config.h
+d:\nvidia\cuda\toolkit\include\crt\host_defines.h
+d:\nvidia\cuda\toolkit\include\crt\math_functions.h
+d:\nvidia\cuda\toolkit\include\crt\math_functions.hpp
+d:\nvidia\cuda\toolkit\include\crt\sm_70_rt.h
+d:\nvidia\cuda\toolkit\include\cuda_device_runtime_api.h
+D:\NVIDIA\CUDA\Toolkit\include\cuda_runtime.h
+d:\nvidia\cuda\toolkit\include\cuda_runtime_api.h
+d:\nvidia\cuda\toolkit\include\cuda_surface_types.h
+d:\nvidia\cuda\toolkit\include\cuda_texture_types.h
+d:\nvidia\cuda\toolkit\include\device_atomic_functions.h
+d:\nvidia\cuda\toolkit\include\device_launch_parameters.h
+d:\nvidia\cuda\toolkit\include\device_types.h
+d:\nvidia\cuda\toolkit\include\driver_functions.h
+d:\nvidia\cuda\toolkit\include\driver_types.h
+d:\nvidia\cuda\toolkit\include\library_types.h
+d:\nvidia\cuda\toolkit\include\sm_20_atomic_functions.h
+d:\nvidia\cuda\toolkit\include\sm_20_intrinsics.h
+d:\nvidia\cuda\toolkit\include\sm_30_intrinsics.h
+d:\nvidia\cuda\toolkit\include\sm_32_atomic_functions.h
+d:\nvidia\cuda\toolkit\include\sm_32_intrinsics.h
+d:\nvidia\cuda\toolkit\include\sm_35_atomic_functions.h
+d:\nvidia\cuda\toolkit\include\sm_35_intrinsics.h
+d:\nvidia\cuda\toolkit\include\sm_60_atomic_functions.h
+d:\nvidia\cuda\toolkit\include\sm_61_intrinsics.h
+d:\nvidia\cuda\toolkit\include\surface_functions.h
+d:\nvidia\cuda\toolkit\include\surface_indirect_functions.h
+d:\nvidia\cuda\toolkit\include\surface_types.h
+d:\nvidia\cuda\toolkit\include\texture_fetch_functions.h
+d:\nvidia\cuda\toolkit\include\texture_indirect_functions.h
+d:\nvidia\cuda\toolkit\include\texture_types.h
+d:\nvidia\cuda\toolkit\include\vector_functions.h
+d:\nvidia\cuda\toolkit\include\vector_functions.hpp
+d:\nvidia\cuda\toolkit\include\vector_types.h
+F:\program\C++\Graphic Plus\Graphic Plus\kernel.cu
