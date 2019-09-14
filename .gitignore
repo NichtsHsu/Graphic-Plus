@@ -36,7 +36,6 @@ Debug/*
 ipch/*
 Release/*
 x64/*
-*.suo
 Graphic Plus/Debug/*
 Graphic Plus/Release/*
 Graphic Plus/x64/*
