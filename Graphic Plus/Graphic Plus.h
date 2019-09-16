@@ -39,9 +39,6 @@ private:
 	IDirect3DTexture8 *m_textureTemp;
 };
 
-extern Effect *ef_gray_scale,
-	*ef_gaussian_blur;
-
 extern "C"
 {
 	GRAPHICPLUS_API GMReal __graphic__init();
@@ -55,6 +52,11 @@ extern "C"
 	void freeBoxBlurKernel();
 	void reMallocBoxBlur(int width, int height);
 	GRAPHICPLUS_API GMReal __graphic_box_blur(GMReal surf, GMReal level);
+
+	void addBoxBlurMosaicKernel(unsigned *imageData, int *args);
+	void freeBoxBlurMosaicKernel();
+	void reMallocBoxBlurMosaic(int width, int height);
+	GRAPHICPLUS_API GMReal __graphic_box_blur_mosaic(GMReal surf, GMReal level, GMReal blockWidth, GMReal blockHeight);
 
 	GRAPHICPLUS_API GMReal __graphic_free();
 }

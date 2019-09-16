@@ -216,6 +216,7 @@
   </ItemGroup>
   <ItemGroup>
     <CudaCompile Include="BoxBlur.cu" />
+    <CudaCompile Include="BoxBlurMosaic.cu" />
     <CudaCompile Include="grayScale.cu">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
       <FileType>Document</FileType>

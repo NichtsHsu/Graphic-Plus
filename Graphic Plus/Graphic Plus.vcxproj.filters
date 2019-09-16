@@ -133,5 +133,8 @@
     <CudaCompile Include="BoxBlur.cu">
       <Filter>源文件</Filter>
     </CudaCompile>
+    <CudaCompile Include="BoxBlurMosaic.cu">
+      <Filter>源文件</Filter>
+    </CudaCompile>
   </ItemGroup>
 </Project>
