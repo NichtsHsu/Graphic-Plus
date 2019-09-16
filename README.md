@@ -11,6 +11,7 @@ ____
 * Use class 'Effect' to manager cuda function.
 * Add box blur function.
 * Add box blur mossaic function.
+* Add mosaic function -- square and circle.
 
 #### 2019/9/14 Ver0.1
 * Create Project.  
