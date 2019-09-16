@@ -7,7 +7,8 @@
 gm::CGMAPI *gmapi = nullptr;
 extern Effect *ef_gray_scale = nullptr,
 *ef_box_blur = nullptr,
-*ef_box_blur_mosaic = nullptr;
+*ef_box_blur_mosaic = nullptr,
+*ef_mosaic = nullptr;
 
 Effect::Effect(void(*addFunc)(unsigned *, int *), void(*freeFunc)(), void(*reMallocFunc)(int, int), int argsNum) :
 	m_addFunc(addFunc), m_freeFunc(freeFunc), m_reMallocFunc(reMallocFunc), m_argsNum(argsNum), m_args(new int[2 + argsNum]), m_textureTemp(nullptr)
@@ -74,6 +75,7 @@ GMReal __graphic__init()
 	ef_gray_scale = new Effect(&addGrayScaleKernel, &freeGrayScaleKernel, &reMallocGrayScale, 0);
 	ef_box_blur = new Effect(&addBoxBlurKernel, &freeBoxBlurKernel, &reMallocBoxBlur, 1);
 	ef_box_blur_mosaic = new Effect(&addBoxBlurMosaicKernel, &freeBoxBlurMosaicKernel, &reMallocBoxBlurMosaic, 3);
+	ef_mosaic = new Effect(&addMosaicKernel, &freeMosaicKernel, &reMallocMosaic, 2);
 
 	return GMReal(true);
 }
@@ -94,11 +96,18 @@ GMReal __graphic_box_blur_mosaic(GMReal surf, GMReal level, GMReal blockWidth, G
 	return GMReal(ef_box_blur_mosaic->exec(surf, args));
 }
 
+GMReal __graphic_mosaic(GMReal surf, GMReal type, GMReal size)
+{
+	int args[] = { int(type), int(size) };
+	return GMReal(ef_mosaic->exec(surf, args));
+}
+
 GMReal __graphic_free()
 {
 	delete ef_gray_scale;
 	delete ef_box_blur;
 	delete ef_box_blur_mosaic;
+	delete ef_mosaic;
 
 	return GMReal(true);
 }

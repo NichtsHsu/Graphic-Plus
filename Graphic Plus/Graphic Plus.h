@@ -58,5 +58,10 @@ extern "C"
 	void reMallocBoxBlurMosaic(int width, int height);
 	GRAPHICPLUS_API GMReal __graphic_box_blur_mosaic(GMReal surf, GMReal level, GMReal blockWidth, GMReal blockHeight);
 
+	void addMosaicKernel(unsigned *imageData, int *args);
+	void freeMosaicKernel();
+	void reMallocMosaic(int width, int height);
+	GRAPHICPLUS_API GMReal __graphic_mosaic(GMReal surf, GMReal type, GMReal size);
+
 	GRAPHICPLUS_API GMReal __graphic_free();
 }
