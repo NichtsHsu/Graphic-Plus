@@ -10,6 +10,7 @@ ____
 #### 2019/9/16 Ver0.2
 * Use class 'Effect' to manager cuda function.
 * Add box blur function.
+* Add box blur mossaic function.
 
 #### 2019/9/14 Ver0.1
 * Create Project.  
