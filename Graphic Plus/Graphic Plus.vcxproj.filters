@@ -127,7 +127,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CudaCompile Include="kernel.cu">
+    <CudaCompile Include="grayScale.cu">
+      <Filter>源文件</Filter>
+    </CudaCompile>
+    <CudaCompile Include="BoxBlur.cu">
       <Filter>源文件</Filter>
     </CudaCompile>
   </ItemGroup>

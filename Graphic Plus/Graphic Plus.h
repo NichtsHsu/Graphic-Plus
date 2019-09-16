@@ -15,22 +15,46 @@
 #pragma comment (lib, "d3d8.lib")
 #include <d3dx8.h>
 #pragma comment (lib, "d3dx8.lib")
-#include <omp.h>
 
 typedef double GMReal;
 typedef char *GMString;
 
 extern gm::CGMAPI *gmapi;
-extern int width, height;
-extern IDirect3DTexture8 *textureDest;
+
+class Effect
+{
+public:
+	Effect(void(*addFunc)(unsigned *, int *), void(*freeFunc)(), void(*reMallocFunc)(int, int), int argsNum);
+	~Effect();
+
+	bool exec(int surf, int *args);
+
+private:
+	int m_argsNum;
+	int *m_args;
+	void(*m_addFunc)(unsigned *, int *);
+	void(*m_freeFunc)();
+	void(*m_reMallocFunc)(int, int);
+	int m_width, m_height;
+	IDirect3DTexture8 *m_textureTemp;
+};
+
+extern Effect *ef_gray_scale,
+	*ef_gaussian_blur;
 
 extern "C"
 {
-	void addKernel(unsigned *imageData, int width, int height);
-	void freeKernel();
-	void reMalloc(int width, int height);
+	GRAPHICPLUS_API GMReal __graphic__init();
+
+	void addGrayScaleKernel(unsigned *imageData, int *args);
+	void freeGrayScaleKernel();
+	void reMallocGrayScale(int width, int height);
 	GRAPHICPLUS_API GMReal __graphic_gray_scale(GMReal surf);
+
+	void addBoxBlurKernel(unsigned *imageData, int *args);
+	void freeBoxBlurKernel();
+	void reMallocBoxBlur(int width, int height);
+	GRAPHICPLUS_API GMReal __graphic_box_blur(GMReal surf, GMReal level);
+
 	GRAPHICPLUS_API GMReal __graphic_free();
 }
-
-void reShape(IDirect3DDevice8 *device, int width, int height);
