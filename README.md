@@ -7,6 +7,9 @@
 ### Updata log：
 
 ____
+#### 2019/9/17 Ver0.3
+* Add invert function
+
 #### 2019/9/16 Ver0.2
 * Use class 'Effect' to manager cuda function.
 * Add box blur function.
