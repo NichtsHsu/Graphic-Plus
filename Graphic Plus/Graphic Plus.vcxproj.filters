@@ -139,5 +139,8 @@
     <CudaCompile Include="Mosaic.cu">
       <Filter>源文件</Filter>
     </CudaCompile>
+    <CudaCompile Include="Invert.cu">
+      <Filter>源文件</Filter>
+    </CudaCompile>
   </ItemGroup>
 </Project>

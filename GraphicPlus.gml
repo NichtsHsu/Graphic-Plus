@@ -9,6 +9,7 @@
     global.__graphic_box_blur_mosaic = external_define(global.__graphicPlusDllPath, "__graphic_box_blur_mosaic", dll_stdcall, ty_real, 4, ty_real, ty_real, ty_real, ty_real);
     global.__graphic_gray_scale = external_define(global.__graphicPlusDllPath, "__graphic_gray_scale", dll_stdcall, ty_real, 1, ty_real);
     global.__graphic_mosaic = external_define(global.__graphicPlusDllPath, "__graphic_mosaic", dll_stdcall, ty_real, 3, ty_real, ty_real, ty_real);
+    global.__graphic_invert = external_define(global.__graphicPlusDllPath, "__graphic_invert", dll_stdcall, ty_real, 2, ty_real, ty_real);
     global.__graphic_free = external_define(global.__graphicPlusDllPath, "__graphic_free", dll_stdcall, ty_real, 0);
     return external_call(global.__graphic_init);
 }
@@ -51,6 +52,21 @@
 // 灰度化，算法为灰=(红+绿+蓝)/3
 {
     return external_call(global.__graphic_gray_scale, argument0);
+}
+
+#define graphic_invert
+// graphic_invert(surf, invertTransparentPixel)
+/* Invert color.
+ * invertTransparentPixel :
+ *      false : Transparent pixel (r, g, b, 0) will keep their origin color. (Quickly)
+ *      true : Transparent pixel (r, g, b, 0) will also invert to (255 - r, 255 - g, 255 - b, 0). (Slowly)
+ */
+/* 反色。
+ *      false : 透明像素(r, g, b, 0)将保持原本的颜色. (比较快)
+ *      true : 透明像素(r, g, b, 0)也会被反色至(255 - r, 255 - g, 255 - b, 0). (比较慢)
+ */
+{
+    return external_call(global.__graphic_invert, argument0, argument1);
 }
 
 #define graphic_mosaic

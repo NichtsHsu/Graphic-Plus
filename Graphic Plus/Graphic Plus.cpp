@@ -8,7 +8,8 @@ gm::CGMAPI *gmapi = nullptr;
 extern Effect *ef_gray_scale = nullptr,
 *ef_box_blur = nullptr,
 *ef_box_blur_mosaic = nullptr,
-*ef_mosaic = nullptr;
+*ef_mosaic = nullptr,
+*ef_invert = nullptr;
 
 Effect::Effect(void(*addFunc)(unsigned *, int *), void(*freeFunc)(), void(*reMallocFunc)(int, int), int argsNum) :
 	m_addFunc(addFunc), m_freeFunc(freeFunc), m_reMallocFunc(reMallocFunc), m_argsNum(argsNum), m_args(new int[2 + argsNum]), m_textureTemp(nullptr)
@@ -76,38 +77,61 @@ GMReal __graphic__init()
 	ef_box_blur = new Effect(&addBoxBlurKernel, &freeBoxBlurKernel, &reMallocBoxBlur, 1);
 	ef_box_blur_mosaic = new Effect(&addBoxBlurMosaicKernel, &freeBoxBlurMosaicKernel, &reMallocBoxBlurMosaic, 3);
 	ef_mosaic = new Effect(&addMosaicKernel, &freeMosaicKernel, &reMallocMosaic, 2);
+	ef_invert = new Effect(&addInvertKernel, &freeInvertKernel, &reMallocInvert, 1);
 
 	return GMReal(true);
 }
 
 GMReal __graphic_gray_scale(GMReal surf)
 {
+	if (!ef_gray_scale)
+		return GMReal(false);
 	return GMReal(ef_gray_scale->exec(surf, nullptr));
 }
 
 GMReal __graphic_box_blur(GMReal surf, GMReal level)
 {
-	int args = level;
+	if (!ef_box_blur)
+		return GMReal(false);
+	int args = int(level);
 	return GMReal(ef_box_blur->exec(surf, &args));
 }
 GMReal __graphic_box_blur_mosaic(GMReal surf, GMReal level, GMReal blockWidth, GMReal blockHeight)
 {
+	if (!ef_box_blur_mosaic)
+		return GMReal(false);
 	int args[] = { int(level), int(blockWidth), int(blockHeight)};
 	return GMReal(ef_box_blur_mosaic->exec(surf, args));
 }
 
 GMReal __graphic_mosaic(GMReal surf, GMReal type, GMReal size)
 {
+	if (!ef_mosaic)
+		return GMReal(false);
 	int args[] = { int(type), int(size) };
 	return GMReal(ef_mosaic->exec(surf, args));
 }
 
+GMReal __graphic_invert(GMReal surf, GMReal invertTransparentPixel)
+{
+	if (!ef_invert)
+		return GMReal(false);
+	int args = int(invertTransparentPixel);
+	return GMReal(ef_invert->exec(surf, &args));
+}
+
 GMReal __graphic_free()
 {
-	delete ef_gray_scale;
-	delete ef_box_blur;
-	delete ef_box_blur_mosaic;
-	delete ef_mosaic;
+	if (ef_gray_scale)
+		delete ef_gray_scale;
+	if (ef_box_blur)
+		delete ef_box_blur;
+	if (ef_box_blur_mosaic)
+		delete ef_box_blur_mosaic;
+	if (ef_mosaic)
+		delete ef_mosaic;
+	if (ef_invert)
+		delete ef_invert;
 
 	return GMReal(true);
 }

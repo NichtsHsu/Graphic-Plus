@@ -63,5 +63,10 @@ extern "C"
 	void reMallocMosaic(int width, int height);
 	GRAPHICPLUS_API GMReal __graphic_mosaic(GMReal surf, GMReal type, GMReal size);
 
+	void addInvertKernel(unsigned *imageData, int *args);
+	void freeInvertKernel();
+	void reMallocInvert(int width, int height);
+	GRAPHICPLUS_API GMReal __graphic_invert(GMReal surf, GMReal invertTransparentPixel);
+
 	GRAPHICPLUS_API GMReal __graphic_free();
 }
