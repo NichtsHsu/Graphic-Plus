@@ -1,8 +1,8 @@
 # Graphic Plus
 
-+ This is a Visual Studio 2013 Project because CUDA 32bit version only support vs2013 and earlier.  
-+ This project is a graphic dll of GameMaker8.0 using CUDA 10.1.  
-+ There is a unfortunate news that if you use this dll on you GM8 game, every player must install CUDA on their computer to run dll.  
+* This is a Visual Studio 2013 Project because CUDA 32bit version only support vs2013 and earlier.  
+* This project is a graphic dll of GameMaker8.0 using CUDA 10.1.  
+* There is a unfortunate news that if you use this dll on you GM8 game, every player must install CUDA on their computer to run dll.  
 
 ### Updata log：
 
@@ -18,4 +18,10 @@ ____
 
 #### 2019/9/14 Ver0.1
 * Create Project.  
-* Add gray scale function.
+* Add gray scale function.  
+
+### How to read code
+* 'Gmapi\*.h' and 'Gmapi*\.cpp' files are from GMAPI.
+* 'Graphic Plus.h' and 'Graphic Plus.cpp' is the core file in which defined the class 'Effect'.
+* '\*.cu\*' is CUDA files, include kernel algorithms.
+* The class Effect use its constructor function register CUDA functions, then in its 'exec()' function call GMAPI functions, D3D8 functions and registered CUDA functions.
